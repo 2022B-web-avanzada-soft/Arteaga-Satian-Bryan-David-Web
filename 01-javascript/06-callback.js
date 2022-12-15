@@ -1,16 +1,16 @@
 const fs = require('fs');
 
 // 06-callbacks
-// console.log("PRIMERO")
-// fs.readFile(
-//     './06-ejemplo.txt',
-//     'utf-8',
-//     (errorLecturaPrimerArchivo, contenidoPrimerArchivo) => {
-//         console.log("SEGUNDO")
-//     }
-// )
-//
-// console.log("TERCERO")
+console.log("PRIMERO")
+fs.readFile(
+    './06-ejemplo.txt',
+    'utf-8',
+    (errorLecturaPrimerArchivo, contenidoPrimerArchivo) => {
+        console.log("SEGUNDO")
+    }
+)
+
+console.log("TERCERO")
 
 
 //Bien ahora para que sea síncrono usamos un callback
