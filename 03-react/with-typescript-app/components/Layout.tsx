@@ -24,7 +24,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     {children}
     <footer>
       <hr />
-      <span>I'm here to stay (Footer)</span>
+      <span className={"text-3xl font-bold underline"}>I'm here to stay (Footer)</span>
     </footer>
   </div>
 )
