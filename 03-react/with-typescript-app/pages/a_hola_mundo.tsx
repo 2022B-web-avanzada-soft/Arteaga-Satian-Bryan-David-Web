@@ -8,7 +8,7 @@ export default function a_hola_mundo() {
         <div>
             <h1>Hola Mundo</h1>
             <EstilosEjemplo />
-            <MiComponente url={'https://www.google.com'} iteraciones={3} mostrar={true} />
+            <MiComponente url={'https://www.google.com'} iteraciones={3} mostrar={true}/>
         </div>
     );
 };
