@@ -1,1 +1,1 @@
-[{"id":1,"nombres":"jeje","genero":"Femenino","edad":44,"retirado":false,"nacionalidad":"ere"}]
+[{"id":1,"nombres":"David Arteaga","genero":"Masculino","edad":99,"retirado":false,"nacionalidad":"Ecuatoriano"}]
