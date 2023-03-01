@@ -11,7 +11,7 @@ interface IFormularioEjemplo {
 export default function () {
     const [nombre, setNombre] = useState("David");
 
-    const {handleSubmit, register} = useForm<IFormularioEjemplo>(
+    const {handleSubmit, register, formState: {errors, isValid}} = useForm<IFormularioEjemplo>(
         {
             defaultValues: {
                 nombre: nombre
@@ -34,7 +34,9 @@ export default function () {
                         placeholder={"Nombre"}
                         type="text"
                         id={"nombre"}
-                        {...register("nombre")}
+                        {...register("nombre",{
+                            required: true,
+                        })}
                     />
                     <br/>
                     <div id={"nombreHelp"} className={"form-text"}>Ingresa tu nombre</div>
