@@ -32,7 +32,9 @@ const Layout = ({children, title = 'This is the default title'}: Props) => (
                       crossOrigin="anonymous"></link>
             </nav>
         </header>
-        {children}
+        <div className={'container'}>
+            {children}
+        </div>
         <footer>
             <hr/>
             <span className={"text-3xl font-bold underline"}>I'm here to stay (Footer)</span>

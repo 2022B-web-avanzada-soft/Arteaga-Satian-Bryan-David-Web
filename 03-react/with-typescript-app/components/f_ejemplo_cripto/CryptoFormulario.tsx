@@ -2,8 +2,10 @@ import {MONEDAS} from "../d_hook_custom/monedas";
 import {useEffect, useState} from "react";
 import {IMoneda} from "../../interfaces/moneda";
 import useSelectMoneda from "../hooks/UseSelectMoneda";
+import {IConsultaMoneda} from "../../pages/f_ejemplo_criptomonedas";
 
-export default function ({setMonedas}) {
+export default function (params) {
+    const {setMonedas} = params;
     const [monedasArreglo, setMonedasArreglo] = useState(MONEDAS);
     const [criptoMonedasArreglo, setCriptoMonedasArreglo] = useState([] as IMoneda[]);
 
@@ -35,6 +37,11 @@ export default function ({setMonedas}) {
 
     const manejarSubmitFormulario = (e) => {
         e.preventDefault();
+        const monedasConsulta: IConsultaMoneda = {
+            valorMoneda: valorMoneda as string,
+            valorCriptoMoneda: valorCriptoMoneda as string
+        }
+        setMonedas(monedasConsulta);
     }
 
     return (
