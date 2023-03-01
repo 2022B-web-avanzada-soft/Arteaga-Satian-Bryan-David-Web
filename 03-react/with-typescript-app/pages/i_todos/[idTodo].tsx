@@ -1,11 +1,25 @@
 import Layout from "../../components/Layout";
 import {GetStaticProps} from "next";
-import {TodoHttp} from "../../services/http/todo.http";
+import {ITodo, TodoHttp} from "../../services/http/todo.http";
+import {useRouter} from "next/router";
 
-export default function Todo() {
+interface IParametrosTodo {
+    error?: string,
+    todo?: ITodo
+}
+
+export default function Todo(params: IParametrosTodo) {
+    console.log(params)
+    //Podemoos obtener los parámetros de la ruta
+    const router = useRouter();
+    const {idTodo, nombre, apellido} = router.query;
+    console.log(idTodo, nombre, apellido);
+    //ejm: http://localhost:3000/i_todos/3?nombre=David
+    //Se imprime: 3 David undefined
+    console.log(router);
     return (
-        <Layout title="Todo">
-            <h1>Todos HIJO</h1>
+        <Layout title="Todo hijo">
+            <h1>Todos HIJO {params?.todo.title}</h1>
         </Layout>
     );
 }

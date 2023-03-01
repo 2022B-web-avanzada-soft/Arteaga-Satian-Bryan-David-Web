@@ -1,5 +1,5 @@
 //Obtenemos datos de una fake api.
-export interface Todo {
+export interface ITodo {
     userId: number;
     id: number;
     title: string;
@@ -12,7 +12,7 @@ export async function TodoHttp(id?: string) {
     //Si es un id, lo convertimos en un array de un solo elemento.
     if (id) {
         const auxiliar = await respuesta.json()
-        return [auxiliar] as Todo[];
+        return [auxiliar] as ITodo[];
     }
-    return await respuesta.json() as Todo[];
+    return await respuesta.json() as ITodo[];
 }

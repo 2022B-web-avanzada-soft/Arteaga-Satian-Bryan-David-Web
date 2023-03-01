@@ -3,10 +3,10 @@
 
 import Layout from "../../components/Layout";
 import {useEffect, useState} from "react";
-import {Todo, TodoHttp} from "../../services/http/todo.http";
+import {ITodo, TodoHttp} from "../../services/http/todo.http";
 
 export default function Todos() {
-    const [arregloTodos, setArregloTodos] = useState<Todo[]>([] as Todo[]);
+    const [arregloTodos, setArregloTodos] = useState<ITodo[]>([] as ITodo[]);
 
     useEffect(() => {
             consultarTodos().then().catch((error) => {
