@@ -8,7 +8,8 @@ class Director(models.Model):
     nombre = models.CharField(max_length=50, null=False)
     genero = models.CharField(max_length=50, null=False)
     edad = models.IntegerField(null=False)
-    nacionalidad = models.CharField(max_length=50)
+    retirado = models.BooleanField(default=False)
+    nacionalidad = models.CharField(max_length=50, null=False)
 
     def __str__(self):
         return self.nombre

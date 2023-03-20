@@ -8,7 +8,7 @@ class Pelicula(models.Model):
     titulo = models.CharField(max_length=50, null=False)
     anioLanzamiento = models.CharField(max_length=50, null=False)
     genero = models.CharField(max_length=50, null=False)
-    duracion = models.IntegerField(null=False)
+    rentable = models.BooleanField(default=False, null=False)
     director = models.ForeignKey('Director.Director', on_delete=models.CASCADE)
 
     def __str__(self):
